@@ -11,7 +11,8 @@ A full-stack web application for tracking personal expenses and managing your bu
 - Responsive design for desktop and mobile use
 - Secure user authentication
 - Data visualization with charts and graphs
-
+- Categorize based on category
+  
 ## Tech Stack
 
 ### Frontend
@@ -21,69 +22,78 @@ A full-stack web application for tracking personal expenses and managing your bu
 - Axios for API requests
 
 ### Backend
-- Python
-- FastAPI
-- SQLAlchemy
-- PostgreSQL database
+- Node.js
+- Express.js
+- MongoDB
+- JWT for authentication
 
 ## Prerequisites
 
-- Python 3.8 or higher
 - Node.js 14.x or higher
-- PostgreSQL database
+- MongoDB
+- npm (Node Package Manager)
 
 ## Installation
 
-1. Clone the repository
+1. Clone the repository or download the project files
 ```bash
-git clone [repository-url]
+git clone https://github.com/yourusername/expense-tracker-project.git
 cd expense-tracker-project
 ```
 
 2. Backend Setup
 ```bash
+# Navigate to backend directory
 cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-pip install -r requirements.txt
+
+# Install dependencies
+npm install
+
+# Create .env file in the backend directory and add:
+# DATABASE_URL=mongodb://localhost:27017/expense_tracker
+# SECRET_KEY=your_secret_key
+# PORT=8000
+
+# Start the backend server
+npm start
 ```
 
 3. Frontend Setup
 ```bash
+# Navigate to frontend directory
 cd frontend
-npm install
-```
 
-4. Database Setup
-- Create a PostgreSQL database
-- Update the database connection string in the backend configuration
+# Install dependencies
+npm install
+
+# Start the frontend development server
+npm start
+```
 
 ## Environment Variables
 
 Create a `.env` file in the backend directory with the following variables:
 ```
-DATABASE_URL=postgresql://username:password@localhost:5432/expense_tracker
+DATABASE_URL=mongodb://localhost:27017/expense_tracker
 SECRET_KEY=your_secret_key
+PORT=8000
 ```
 
 ## Running the Application
 
-1. Start the Backend Server
+1. Start MongoDB service on your system
+
+2. Start the Backend Server
 ```bash
 cd backend
-uvicorn main:app --reload
+npm start
 ```
 
-2. Start the Frontend Development Server
+3. Start the Frontend Development Server
 ```bash
 cd frontend
 npm start
 ```
-
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
-- API Documentation: http://localhost:8000/docs
 
 ## Usage
 
@@ -93,13 +103,6 @@ The application will be available at:
 4. Manage categories and track your budget
 5. Generate and view reports
 
-## Contributing
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
 
 ## License
 
