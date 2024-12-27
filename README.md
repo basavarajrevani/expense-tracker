@@ -37,7 +37,7 @@ A full-stack web application for tracking personal expenses and managing your bu
 
 1. Clone the repository or download the project files
 ```bash
-git clone https://github.com/yourusername/expense-tracker-project.git
+git clone https://github.com/basavarajrevani/expense-tracker-project.git
 cd expense-tracker-project
 ```
 
